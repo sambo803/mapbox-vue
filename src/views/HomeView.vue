@@ -12,8 +12,7 @@ export default {
   methods: {
     makeMap: function () {
       console.log("making map...");
-      mapboxgl.accessToken =
-        "";
+      mapboxgl.accessToken = process.env.VUE_APP_MAPBOX_API_KEY
       const map = new mapboxgl.Map({
         container: "map", // container ID
         style: "mapbox://styles/mapbox/streets-v11", // style URL
